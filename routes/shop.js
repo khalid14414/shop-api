@@ -1,7 +1,7 @@
 import path from 'path'
 import { fileURLToPath } from 'url';
 import { Router } from "express";
-import { getProduct } from '../controllers/products.js';
+import { getCart, getCheckout, getIndex, getOrder, getProduct } from '../controllers/shop.js';
 
 
 
@@ -13,6 +13,15 @@ console.log(__filename)
 
 const shopRouter = Router()
 
-shopRouter.get('/', getProduct)
+shopRouter.get('/', getIndex)
+
+shopRouter.get('/products',getProduct)
+
+
+shopRouter.get('/cart',getCart)
+
+shopRouter.get('/order',getOrder)
+
+shopRouter.get('/checkout',getCheckout)
 
 export default shopRouter

@@ -1,7 +1,7 @@
 import { Router } from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-import { addProduct, getAddProduct } from "../controllers/products.js";
+import { addProduct, getAddProduct, getProductView } from "../controllers/admin.js";
 
 const adminRouter = Router()
 
@@ -11,6 +11,8 @@ const adminRouter = Router()
 
 
 adminRouter.get('/add-product', getAddProduct)
+
+adminRouter.get('/product-view', getProductView)
 
 adminRouter.post('/add-product', addProduct)
 
