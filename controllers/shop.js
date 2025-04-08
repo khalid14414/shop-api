@@ -9,6 +9,13 @@ export const getProduct = (req, res, next) => {
 
 }
 
+
+export const getProducts = (req,res,next)=>{
+    const id = req.params.id
+    console.log(id)
+    res.redirect('/')
+}
+
 export const getIndex = (req, res, next) => {
     console.log(product)
     res.render('shop/index', { pageTitle: 'Shop', prods: product, path: '/' })

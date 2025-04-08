@@ -1,7 +1,7 @@
 import path from 'path'
 import { fileURLToPath } from 'url';
 import { Router } from "express";
-import { getCart, getCheckout, getIndex, getOrder, getProduct } from '../controllers/shop.js';
+import { getCart, getCheckout, getIndex, getOrder, getProduct, getProducts } from '../controllers/shop.js';
 
 
 
@@ -17,6 +17,7 @@ shopRouter.get('/', getIndex)
 
 shopRouter.get('/products',getProduct)
 
+shopRouter.get('/product/:id',getProducts)
 
 shopRouter.get('/cart',getCart)
 

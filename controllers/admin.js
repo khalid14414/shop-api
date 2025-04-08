@@ -5,7 +5,9 @@ export const getAddProduct =(req,res,next)=>{
 }
 
 export const addProduct = (req,res,next)=>{
+    const id = Math.random().toString()
     product.push({
+        id:id,
         title:req.body.title,
         price:req.body.price,
         description:req.body.description,
